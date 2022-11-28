@@ -1,12 +1,12 @@
-"""
-Pronostico de la resistencia del concreto usando redes neuronales
------------------------------------------------------------------------------------------
-
-La descripción del problema está disponible en:
-
-https://jdvelasq.github.io/courses/notebooks/sklearn_supervised_10_neural_networks/1-02_pronostico_de_la_resistencia_del_concreto.html
-
-"""
+#"""
+#Pronostico de la resistencia del concreto usando redes neuronales
+#-----------------------------------------------------------------------------------------
+#
+#La descripción del problema está disponible en:
+#
+#https://jdvelasq.github.io/courses/notebooks/sklearn_supervised_10_neural_networks/1-02_pronostico_de_la_resistencia_del_concreto.html
+#
+#"""
 
 import pandas as pd
 
@@ -36,7 +36,7 @@ def pregunta_02():
     """
 
     # Importe train_test_split
-    from ____ import ____
+    from sklearn.model_selection import train_test_split
 
     # Cargue los datos de ejemplo y asigne los resultados a `X` y `y`.
     x, y = pregunta_01()
@@ -48,11 +48,11 @@ def pregunta_02():
         x_test,  
         y_train,  
         y_test,  
-    ) = ____(  
-        ____,  
-        ____,  
-        test_size=____,  
-        random_state=____,  
+    ) = train_test_split(  
+        x,  
+        y,  
+        test_size=0.75,  
+        random_state=12453,  
     )  
 
     # Retorne `X_train`, `X_test`, `y_train` y `y_test`
