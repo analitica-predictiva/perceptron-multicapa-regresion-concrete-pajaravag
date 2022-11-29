@@ -109,13 +109,13 @@ def pregunta_04():
     #   * Use parada temprana
 
     param_grid = {
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
+        'mlpregressor__hidden_layer_sizes': [(x,) for x in range(1,9)],  
+        'mlpregressor__activation': ('relu'),  
+        'mlpregressor__learning_rate': ('adaptive'),  
+        'mlpregressor__momentum': [(0.7), (0.8), (0.9)],  
+        'mlpregressor__learning_rate_init': [(0.01), (0.05), (0.1)],  
+        'mlpregressor__max_iter': (5000),  
+        'mlpregressor__early_stopping': (True),  
     }
 
     estimator = pregunta_03()
@@ -128,7 +128,7 @@ def pregunta_04():
         estimator=estimator,
         param_grid=param_grid,
         cv = 5,  
-        ___ = ____  
+        scoring = 'r2'  
     )
 
     return gridsearchcv
