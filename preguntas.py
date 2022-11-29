@@ -110,12 +110,12 @@ def pregunta_04():
 
     param_grid = {
         'mlpregressor__hidden_layer_sizes': [(x,) for x in range(1,9)],  
-        'mlpregressor__activation': ('relu'),  
-        'mlpregressor__learning_rate': ('adaptive'),  
+        'mlpregressor__activation': ['relu'],  
+        'mlpregressor__learning_rate': ['adaptive'],  
         'mlpregressor__momentum': [(0.7), (0.8), (0.9)],  
         'mlpregressor__learning_rate_init': [(0.01), (0.05), (0.1)],  
-        'mlpregressor__max_iter': (5000),  
-        'mlpregressor__early_stopping': (True),  
+        'mlpregressor__max_iter': [5000],  
+        'mlpregressor__early_stopping': [True],  
     }
 
     estimator = pregunta_03()
